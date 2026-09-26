@@ -15,11 +15,23 @@
 - **Voice Interruption**: Simply speak while she is talking to interrupt and redirect her thoughts.
 - **Voice**: Sweet, young, clear, and charming female voice (`Leda`).
 
-### 🖥️ 2. Live Screen Vision (Every 3 Seconds)
-- Periodically captures and analyzes your screen in real time.
-- Guides you through **LeetCode problems, VS Code errors, online exams, PDF notes, or browser research**.
+### 👁️ 2. Multimodal Perception & Active Thinking Cortex
+- **Continuous Screen Vision**: Live screen capture every 3 seconds with dynamic JPEG encoding.
+- **Visual Grounding Grid**: Overlay with **100px precision sub-ticks** and **200px labeled coordinates** mapped directly to physical display resolution.
+- **Context & State Awareness**: Girisha observes active foreground windows, detects focused apps, and plans actions using spatial visual reasoning before executing.
 
-### 🎓 3. Deep Teaching & Visual Studio (Anna University CSE Syllabus)
+### 🎯 3. Astra 6.0 Precision Pointer & Touchpad Automation
+- **Smooth Micro-Interpolation**: Cursor moves smoothly to trigger UI hover and active focus states.
+- **`verify_and_click`**: High-precision pointer alignment that inspects target coordinates and executes hardware-level clicks/double-clicks.
+- **`find_and_click`**: Windows UI Automation / Accessibility tree traversal to locate buttons, links, and search bars by visible name.
+- **`inspect_point`**: Safe pointer movement to verify visual coordinates before taking action.
+
+### ⚡ 4. Keyboard Shortcut & Hotkey Acceleration
+- **Combo & Shortcut Engine**: Fully supports single keys and complex multi-key combinations (`ctrl+w`, `shift+n`, `alt+f4`, `ctrl+t`, `win`, `space`, `f`).
+- **Normalized Key Dispatch**: Automatically parses and standardizes key tokens with PyAutoGUI and Win32 hardware keystroke fallbacks.
+- **Proctor-Safe Typing (`draft_and_type`)**: Physical character-by-character hardware typing to bypass clipboard restrictions in exam or coding portals like SkillRack/HackerRank.
+
+### 🎓 5. Deep Teaching & Visual Studio (Anna University CSE Syllabus)
 - **Visual Studio Canvas (`show_interactive_visual`)**: Automatically pops up interactive **Mermaid flowcharts, architecture diagrams, step-by-step trace tables, and KaTeX math formulas** in your browser.
 - **Math & Data Plotting (`generate_math_or_data_plot`)**: Renders matplotlib curves and mathematical simulations directly on screen.
 - **Specialized Curriculum**:
@@ -28,15 +40,14 @@
   - **Data Structures & Algorithms (DSA)**: AVL Trees, Graph Algorithms (Dijkstra, Prim's), Dynamic Programming, LeetCode patterns.
   - **Computer Architecture (CAO)**: 5-Stage MIPS Pipelining, Hazards, Booth's Algorithm, Cache Mapping.
 
-### 💻 4. Autonomous F.R.I.D.A.Y. Laptop Control
+### 💻 6. Autonomous F.R.I.D.A.Y. Laptop Control
 - **App & Web Launching**: *"Girisha, open Spotify / VS Code / YouTube."*
 - **Terminal Execution**: Runs PowerShell/CMD commands autonomously.
 - **WhatsApp Automation**: *"Girisha, open WhatsApp chat [Name]."*
-- **Instant Drafting & Typing**: Pastes dictations, emails, or code into active windows.
 - **Project File Creator**: Designs and writes complete Python scripts, apps, or HTML files.
-- **Self-Evolution**: Can upgrade her own source code on demand.
+- **Self-Evolution**: Can update and patch her own source code on demand.
 
-### 🧠 5. Multi-Session Persistent Memory (SQLite)
+### 🧠 7. Multi-Session Persistent Memory (SQLite)
 - Built-in `girisha_memory.db` stores conversation history, study notes, and user weak spots.
 - Auto-retrieves previous conversation context every time you reconnect.
 
@@ -121,6 +132,14 @@ To keep Girisha running in the background without terminal windows:
 
 ## 🗣️ Example Commands to Try
 
+- **Media & Browser Control (Shortcuts)**:
+  - *"Girisha, make this video full screen."* (Executes `gui_action(action='press', key='f')`)
+  - *"Girisha, play the next video."* (Executes `gui_action(action='press', key='shift+n')`)
+  - *"Girisha, pause the video."* (Executes `gui_action(action='press', key='k')` or `space`)
+  - *"Girisha, close this tab."* (Executes `gui_action(action='press', key='ctrl+w')`)
+- **Astra Pointer & UI Navigation**:
+  - *"Girisha, click on the Search bar."* (Uses `find_and_click` / `verify_and_click`)
+  - *"Girisha, click the Subscribe button on the screen."*
 - **Study & Concept Visualization**:
   - *"Girisha, teach me how Banker's Algorithm works and show a table on my screen."*
   - *"Girisha, show me a flowchart diagram of the 5-stage instruction pipeline."*
