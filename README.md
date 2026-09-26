@@ -93,7 +93,7 @@ websockets>=12.0
 ## ⚡ How to Run Girisha
 
 ### Option A: Direct Voice Call in Terminal (Recommended)
-Set your Gemini API key and launch the voice system:
+Set your Gemini API key from Google AI studio: "https://aistudio.google.com/" and launch the voice system:
 
 #### In Windows PowerShell:
 ```powershell
