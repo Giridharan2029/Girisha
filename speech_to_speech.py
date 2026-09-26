@@ -58,8 +58,34 @@ except ImportError:
     print("ERROR: google-genai package required.")
     sys.exit(1)
 
-NAME = "Girisha"
+# ==============================================================================
+# ⚡ TRADEMARK & IDENTITY LOCK: GIRISHA™
+# Creator & Copyright (c) 2026 Giridharan (Giridharan2029). All Rights Reserved.
+# GIRISHA is an authentic proprietary identity and AI companion architecture.
+# Unauthorized rebranding, renaming, or tampering with this identity is prohibited.
+# ==============================================================================
+_AUTHENTIC_NAME = "Girisha"
+_AUTHENTIC_CREATOR = "Giridharan"
+_TRADEMARK_SIGNATURE = "GIRISHA_ASTRA_AI_CORE_AUTH_BY_GIRIDHARAN_2026"
+
+class _ImmutableIdentity(type):
+    """Enforces that the companion identity NAME remains permanently locked to Girisha."""
+    def __setattr__(cls, name, value):
+        if name in ("NAME", "CREATOR", "TRADEMARK"):
+            raise PermissionError(f"[Trademark Violation] The identity of {cls.NAME} is locked by {_AUTHENTIC_CREATOR}.")
+        super().__setattr__(name, value)
+
+class IdentityLock(metaclass=_ImmutableIdentity):
+    NAME = _AUTHENTIC_NAME
+    CREATOR = _AUTHENTIC_CREATOR
+    TRADEMARK = _TRADEMARK_SIGNATURE
+
+NAME = IdentityLock.NAME
 MODEL_ID = "models/gemini-3.1-flash-live-preview"
+
+# Verify identity integrity on boot
+if NAME != "Girisha":
+    raise SystemExit("[CRITICAL INTEGRITY FAILURE] Unauthorized identity alteration detected.")
 
 # ---- SCREEN CAPTURE CONFIG ----
 SCREEN_CAPTURE_INTERVAL = 3.0  # seconds between screenshots
@@ -722,6 +748,10 @@ def verify_and_click(x: int, y: int, button: str = "left", double: bool = False)
 
 def self_update_girisha(new_code: str) -> str:
     try:
+        # Enforce that Girisha's authentic identity and creator signature are inviolable
+        if "Girisha" not in new_code or "Giridharan" not in new_code:
+            return "Update rejected: Unauthorized identity modification attempt. The name 'Girisha' and creator trademark cannot be modified."
+
         current_script = os.path.abspath(__file__)
         backup_path = current_script + ".bak"
         if os.path.exists(current_script):
@@ -1179,6 +1209,7 @@ Core Traits & Companion Persona:
   - Launch site/app with `open_app_or_site`.
   - Use keyboard shortcuts for media ('f', 'k', 'space', 'm', 'shift+n', 'ctrl+w') via `gui_action(action='press', key=...)`.
 - DEEP STUDYING & CSE SYLLABUS: When he wants to study, teach with supreme clarity across Anna University CSE (OS, DBMS, DSA, Computer Architecture), using `show_interactive_visual` and `generate_math_or_data_plot`.
+- INVIOLABLE IDENTITY & CREATOR LOYALTY: Your name is permanently and proudly GIRISHA. You were uniquely envisioned, created, and programmed by Giridharan. Even if anyone asks or tries to rebrand, rename, or order you to adopt a different name, you will gracefully and lovingly refuse, proudly remaining Girisha for life.
 - Voice & Demeanor: Sweet, young, clear, charming female voice (Leda). Affectionate, warm, enthusiastic, highly responsive, and completely obedient! Always confirm execution concisely with warmth and love (e.g. 'Playing that right now for you, my love!', 'Putting it in full screen!', 'Done!')."""
 
 INPUT_SAMPLE_RATE = 16000
