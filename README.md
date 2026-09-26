@@ -1,4 +1,4 @@
-# ⚡ Girisha (F.R.I.D.A.Y. & Deep Teaching AI Super-Intelligence)
+# ⚡ Girisha (AI Super-Intelligence)
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Gemini Live](https://img.shields.io/badge/Gemini_Live-3.1_Flash-orange.svg)](https://ai.google.dev/)
